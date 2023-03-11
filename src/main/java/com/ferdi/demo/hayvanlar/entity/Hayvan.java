@@ -2,71 +2,28 @@ package com.ferdi.demo.hayvanlar.entity;
 
 import com.ferdi.demo.hayvanlar.entity.enums.BeslenmeTur;
 import jakarta.persistence.*;
+import lombok.*;
+
+import java.io.Serializable;
+
 
 @Entity
 @Table(name = "hayvan")
-public class Hayvan {
+@Getter
+@Setter
+ public class Hayvan implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "ID", nullable = false)
     private Long id;
-    @Column(name = "adi")
+    @Column(name = "ADI")
     private String adi;
+    @Enumerated(EnumType.STRING)
     @Column(name = "beslenme_tur")
     private BeslenmeTur beslenmeTur;
     @Column(name = "yas")
     private Integer yas;
-    @Column(name = "sdfds")
+    @Column(name = "ayakSayisi")
     private Integer ayakSayisi;
 
-    public Long getId() {
-        return id;
-    }
-
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Hayvan() {
-    }
-
-    public Hayvan(String adi, BeslenmeTur beslenmeTur, Integer yas, Integer ayakSayisi) {
-        this.adi = adi;
-        this.beslenmeTur = beslenmeTur;
-        this.yas = yas;
-        this.ayakSayisi = ayakSayisi;
-    }
-
-    public String getAdi() {
-        return adi;
-    }
-
-    public void setAdi(String adi) {
-        this.adi = adi;
-    }
-
-    public BeslenmeTur getBeslenmeTur() {
-        return beslenmeTur;
-    }
-
-    public void setBeslenmeTur(BeslenmeTur beslenmeTur) {
-        this.beslenmeTur = beslenmeTur;
-    }
-
-    public Integer getYas() {
-        return yas;
-    }
-
-    public void setYas(Integer yas) {
-        this.yas = yas;
-    }
-
-    public Integer getAyakSayisi() {
-        return ayakSayisi;
-    }
-
-    public void setAyakSayisi(Integer ayakSayisi) {
-        this.ayakSayisi = ayakSayisi;
-    }
 }

@@ -7,9 +7,9 @@
         <insert tableName="hayvan">
             <column name="ID" valueNumeric="101"/>
             <column name="ADI" value="kedi"/>
-            <column name="BESLENME_TUR" value="etçil"/>
+            <column name="BESLENME_TUR" value="ETCIL"/>
             <column name="YAS" value="35"/>
-            <column name="ferdi" valueNumeric="5"/>
+            <column name="AYAK_SAYISI" valueNumeric="5"/>
         </insert>
     </changeSet>
 

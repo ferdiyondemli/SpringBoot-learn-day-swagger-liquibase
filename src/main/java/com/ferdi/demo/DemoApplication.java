@@ -7,6 +7,7 @@ import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.media.StringSchema;
 import io.swagger.v3.oas.models.parameters.Parameter;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -23,11 +24,4 @@ public class DemoApplication {
     }
 
 
-    @Bean
-    public OpenAPI customOpenAPI( ) {
-        return new OpenAPI().info(new Info()
-                        .title("Hayvan API")
-                        .version("5")
-                        .description("Hayvan API'sine ilişkin bilgileri bulabilirsiniz."));
-    }
 }

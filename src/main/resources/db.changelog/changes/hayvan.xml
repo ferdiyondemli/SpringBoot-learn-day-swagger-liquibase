@@ -16,7 +16,7 @@
                 ADI          VARCHAR(255),
                 BESLENME_TUR VARCHAR(255),
                 YAS          int,
-                ferdi        INT,
+                AYAK_SAYISI        INT,
                 CONSTRAINT pk_hayvan_id PRIMARY KEY (id)
             );
         </sql>
@@ -25,7 +25,7 @@
             COMMENT ON COLUMN HAYVAN.ID IS 'Birincil anahtardır.';
             COMMENT ON COLUMN HAYVAN.ADI IS 'Hayvan ad bilgisidir.';
             COMMENT ON COLUMN HAYVAN.BESLENME_TUR IS 'Hayvan Beslenme türüdür ';
-            COMMENT ON COLUMN HAYVAN.ferdi IS 'Hayvan ayaksayı bilgisidir.';
+            COMMENT ON COLUMN HAYVAN.AYAK_SAYISI IS 'Hayvan ayaksayı bilgisidir.';
         </sql>
     </changeSet>
 </databaseChangeLog>
